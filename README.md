@@ -12,7 +12,7 @@ Capture d’écran de l’interface VSCode avec le projet ouvert.
 ---
 
 ## Test de l’API dans Postman
-![postman_ui.jpg](postman_ui.jpg)  
+![postman_ui.png](postman_ui.png)  
 Test de l’API KNN via Postman.
 
 ---
