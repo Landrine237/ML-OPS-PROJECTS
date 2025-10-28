@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model-knn-deployment
+  labels:
+    app: model-knn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: model-knn
+  template:
+    metadata:
+      labels:
+        app: model-knn
+    spec:
+      containers:
+      - name: model-knn-container
+        image: model_knn_img
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
